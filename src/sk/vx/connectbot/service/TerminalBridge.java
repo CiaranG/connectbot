@@ -192,7 +192,8 @@ public class TerminalBridge implements VDUDisplay {
 		// create our default paint
 		defaultPaint = new Paint();
 		defaultPaint.setAntiAlias(true);
-		defaultPaint.setTypeface(Typeface.MONOSPACE);
+                defaultPaint.setTypeface(Typeface.createFromAsset(manager.getAssets(),
+                                        "DroidSansMono.ttf"));
 		defaultPaint.setFakeBoldText(true); // more readable?
 
 		localOutput = new LinkedList<String>();
